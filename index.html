@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Leayain · One desk, ten universes</title>
+  <meta name="description" content="Leayain — second-year Computer Science student at UNSW. One desk, ten universes: click anything on the desk.">
+  <meta property="og:title" content="Leayain · One desk, ten universes">
+  <meta property="og:description" content="Second-year CS at UNSW. Into Valorant and Pop Mart. Click anything on the desk; press space to switch universe.">
+  <meta property="og:image" content="assets/styles/comic@1x.webp">
+  <meta name="theme-color" content="#101014">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpolygon points='32,3 59,18 59,46 32,61 5,46 5,18' fill='%23e5484d' stroke='%2314121c' stroke-width='5'/%3E%3Ctext x='32' y='42' font-family='Impact,sans-serif' font-size='26' text-anchor='middle' fill='%23fff'%3E20%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="loader" role="status">
+    <div class="loader-card">
+      <p class="loader-name" aria-label="Leayain"><span>L</span><span>E</span><span>A</span><span>Y</span><span>A</span><span>I</span><span>N</span></p>
+      <p id="loader-text">Crossing universes…</p>
+      <div class="loader-track"><div id="loader-bar"></div></div>
+    </div>
+  </div>
+
+  <canvas id="stage" tabindex="0" aria-label="An illustrated desk. Every object opens something about Leayain."></canvas>
+  <div id="fx" aria-hidden="true"></div>
+  <canvas id="fx2" aria-hidden="true"></canvas>
+
+  <header class="hud hud-top">
+    <a class="logo" href="./" aria-label="Leayain, home">leayain<sup>°</sup></a>
+    <nav class="nav" aria-label="View">
+      <button id="btn-sound" type="button" class="pill" aria-pressed="false"></button>
+      <button id="btn-desk" type="button" class="pill" aria-pressed="true"></button>
+      <button id="btn-intro" type="button" class="pill" aria-pressed="false"></button>
+    </nav>
+  </header>
+
+  <footer class="hud hud-bottom">
+    <p id="earth" class="caption" aria-live="polite"></p>
+    <p id="hint" class="hint"></p>
+    <div id="dots" class="dots" role="group" aria-label="Universes"></div>
+    <div id="map" class="map" aria-hidden="true"><i id="map-view"></i></div>
+  </footer>
+
+  <nav class="sr" aria-label="Objects on the desk" id="hot-list"></nav>
+  <p id="tip" class="tip" hidden></p>
+  <p id="sfx" class="sfx" aria-hidden="true"></p>
+  <p id="radio" class="radio" role="status" hidden></p>
+
+  <aside id="panel" class="panel" hidden aria-live="polite">
+    <button id="back" type="button" class="pill back">← Back to the desk</button>
+    <div id="panel-body" class="panel-body"></div>
+  </aside>
+
+  <main id="intro" class="intro" hidden>
+    <div id="intro-body" class="intro-body"></div>
+  </main>
+
+  <noscript>
+    <div class="noscript">
+      <h1>Leayain</h1>
+      <p>Second-year Computer Science student at UNSW. Into Valorant and Pop Mart. This page needs JavaScript.</p>
+    </div>
+  </noscript>
+
+  <script src="vendor/gsap.min.js" defer></script>
+  <script src="js/images.js" defer></script>
+  <script src="js/content.js" defer></script>
+  <script src="js/stage.js" defer></script>
+  <script src="js/widgets.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
